@@ -35,6 +35,9 @@
             // 
             // chatListBox
             // 
+            this.chatListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chatListBox.FormattingEnabled = true;
             this.chatListBox.Location = new System.Drawing.Point(12, 12);
             this.chatListBox.Name = "chatListBox";
@@ -44,6 +47,8 @@
             // 
             // chatTextBox
             // 
+            this.chatTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chatTextBox.Location = new System.Drawing.Point(12, 468);
             this.chatTextBox.Name = "chatTextBox";
             this.chatTextBox.Size = new System.Drawing.Size(792, 20);
@@ -51,6 +56,7 @@
             // 
             // sendChatButton
             // 
+            this.sendChatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sendChatButton.Location = new System.Drawing.Point(810, 466);
             this.sendChatButton.Name = "sendChatButton";
             this.sendChatButton.Size = new System.Drawing.Size(75, 23);
@@ -58,7 +64,7 @@
             this.sendChatButton.Text = "Send Chat";
             this.sendChatButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // ClientForm
             // 
             this.AcceptButton = this.sendChatButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,7 +73,7 @@
             this.Controls.Add(this.sendChatButton);
             this.Controls.Add(this.chatTextBox);
             this.Controls.Add(this.chatListBox);
-            this.Name = "Form1";
+            this.Name = "ClientForm";
             this.Text = "Example Client";
             this.ResumeLayout(false);
             this.PerformLayout();
