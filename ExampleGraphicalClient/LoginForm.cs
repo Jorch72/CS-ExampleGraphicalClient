@@ -47,7 +47,10 @@ namespace ExampleGraphicalClient
                             if (File.Exists(LastLogin.LastLoginFile))
                                 File.Delete(LastLogin.LastLoginFile);
                         }
-                        this.Close();
+                        if (this.InvokeRequired)
+                            this.Invoke(new Action(Close));
+                        else
+                            this.Close();
                     }
                     catch (UnauthorizedAccessException ex)
                     {
@@ -56,7 +59,10 @@ namespace ExampleGraphicalClient
                             == DialogResult.Yes)
                         {
                             Program.Session = new Session(usernameTextBox.Text);
-                            this.Close();
+                            if (this.InvokeRequired)
+                                this.Invoke(new Action(Close));
+                            else
+                                this.Close();
                         }
                         else
                         {
@@ -65,6 +71,9 @@ namespace ExampleGraphicalClient
                             else
                                 loginButton.Enabled = true;
                         }
+                    }
+                    catch (Exception ex)
+                    {
                     }
                 });
         }

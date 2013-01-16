@@ -63,6 +63,7 @@
             this.sendChatButton.TabIndex = 2;
             this.sendChatButton.Text = "Send Chat";
             this.sendChatButton.UseVisualStyleBackColor = true;
+            this.sendChatButton.Click += new System.EventHandler(this.sendChatButton_Click);
             // 
             // ClientForm
             // 
@@ -75,6 +76,8 @@
             this.Controls.Add(this.chatListBox);
             this.Name = "ClientForm";
             this.Text = "Example Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientForm_FormClosing);
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
