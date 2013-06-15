@@ -34,7 +34,15 @@ namespace ExampleGraphicalClient
 
         void Client_LoggedIn(object sender, EventArgs e)
         {
-            MessageBox.Show("Logged in!");
+			if (chatListBox.InvokeRequired)
+				chatListBox.Invoke(new Action(() => Client_LoggedIn(sender, e)));
+			else
+			{
+				chatListBox.Items.Add("Logged in!");
+                // Scroll to bottom of list box
+                int visibleItems = chatListBox.ClientSize.Height / chatListBox.ItemHeight;
+                chatListBox.TopIndex = Math.Max(chatListBox.Items.Count - visibleItems + 1, 0);
+			}
         }
 
         void Client_ChatMessage(object sender, ChatMessageEventArgs e)
