@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,12 +108,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\externals\Craft.Net\Craft.Net.Client\Craft.Net.Client.csproj">
-      <Project>{d48822db-4a67-48dd-a858-a629f92233fb}</Project>
-      <Name>Craft.Net.Client</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -120,4 +116,14 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\externals\Craft.Net\source\Craft.Net.Client\Craft.Net.Client.csproj">
+      <Project>{AA930BF3-2073-4C4D-8ADD-07103B29198B}</Project>
+      <Name>Craft.Net.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\externals\Craft.Net\externals\fNbt\fNbt\fNbt.csproj">
+      <Project>{4488498D-976D-4DA3-BF72-109531AF0488}</Project>
+      <Name>fNbt</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
